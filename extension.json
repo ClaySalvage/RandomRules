@@ -7,13 +7,13 @@
   "type": "other",
   "descriptionmsg": "randomrules-desc",
   "requires": {
-    "MediaWiki": ">= 1.31.0"
+    "MediaWiki": ">= 1.38.0"
   },
   "config": {
     "RandomRulesCategories": {
       "value": {
-        "list": ["Covins of Curcalen", "disambig", "stub"],
-        "include": true
+        "list": [],
+        "include": false
       },
       "path": false,
       "description": "Array of categories to include in or exclude from random page selection",
@@ -22,7 +22,7 @@
     },
     "RandomRulesTemplates": {
       "value": {
-        "list": ["unlisted"],
+        "list": ["Unlisted", "Disambig", "IPA"],
         "include": false
       },
       "path": false,
