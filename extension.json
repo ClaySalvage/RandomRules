@@ -1,0 +1,57 @@
+{
+  "name": "RandomRules",
+  "namemsg": "randomrules-extensionname",
+  "version": "1.0.0",
+  "author": "Clay Salvage",
+  "url": "https://meta.wongery.org/wiki/Extension:RandomRules",
+  "type": "other",
+  "descriptionmsg": "randomrules-desc",
+  "requires": {
+    "MediaWiki": ">= 1.31.0"
+  },
+  "config": {
+    "RandomRulesCategories": {
+      "value": {
+        "list": ["Covins of Curcalen", "disambig", "stub"],
+        "include": true
+      },
+      "path": false,
+      "description": "Array of categories to include in or exclude from random page selection",
+      "descriptionmsg": "randomrules-config-randomexcludecategories",
+      "public": true
+    },
+    "RandomRulesTemplates": {
+      "value": {
+        "list": ["unlisted"],
+        "include": false
+      },
+      "path": false,
+      "description": "Array of templates to include in or exclude from random page selection",
+      "descriptionmsg": "randomrules-config-randomexcludetemplates",
+      "public": true
+    }
+  },
+  "AutoloadNamespaces": {
+    "MediaWiki\\Extension\\RandomRules\\": "src/"
+  },
+  "HookHandlers": {
+    "RandomRulesHookHandler": {
+      "class": "MediaWiki\\Extension\\RandomRules\\RandomRulesHookHandler"
+    }
+  },
+  "Hooks": {
+    "RandomPageQuery": "RandomRulesHookHandler"
+  },
+  "license-name": "GPL-2.0-or-later",
+  "ResourceModules": {
+    "ext.randomRules": {
+      "localBasePath": "modules/ext.randomRules",
+      "remoteExtPath": "RandomRules/modules/ext.randomRules",
+      "dependencies": [],
+      "styles": [],
+      "packageFiles": ["init.js"],
+      "messages": []
+    }
+  },
+  "manifest_version": 2
+}
