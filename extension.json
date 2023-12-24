@@ -22,7 +22,7 @@
     },
     "RandomRulesTemplates": {
       "value": {
-        "list": ["Unlisted", "Disambig", "IPA"],
+        "list": ["Disambig", "Unlisted"],
         "include": false
       },
       "path": false,
@@ -40,7 +40,8 @@
     }
   },
   "Hooks": {
-    "RandomPageQuery": "RandomRulesHookHandler"
+    "RandomPageQuery": "RandomRulesHookHandler",
+    "ApiQueryBaseBeforeQuery": "RandomRulesHookHandler"
   },
   "license-name": "GPL-2.0-or-later",
   "ResourceModules": {
