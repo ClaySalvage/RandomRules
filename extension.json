@@ -1,11 +1,14 @@
 {
   "name": "RandomRules",
   "namemsg": "randomrules-extensionname",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Clay Salvage",
   "url": "https://meta.wongery.org/wiki/Extension:RandomRules",
   "type": "other",
   "descriptionmsg": "randomrules-desc",
+  "MessagesDirs": {
+    "RandomRules": ["i18n"]
+  },
   "requires": {
     "MediaWiki": ">= 1.38.0"
   },

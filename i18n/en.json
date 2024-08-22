@@ -1,0 +1,7 @@
+{
+  "@metadata": {
+    "authors": ["Clay Salvage"]
+  },
+  "randomrules-desc": "Allows customization of conditions for random article selection",
+  "randomrules-extensionname": "Random Rules"
+}

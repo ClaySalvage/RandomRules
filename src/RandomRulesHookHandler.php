@@ -60,11 +60,15 @@ class RandomRulesHookHandler implements \MediaWiki\Hook\RandomPageQueryHook, \Me
 			}
 		}
 
-		/* Unfortunately, for this second part to work,
-		*  line 97 in ApiQueryRandom.php must be changed from
+		/* IMPORTANT: Unfortunately, for this second part to work,
+		*  a line in the function runQuery in ApiQueryRandom.php must be changed from
+		*
 		*  $res = $this->select(__METHOD__);
+		*
 		*  to
-		*  $res = $this->select(__METHOD__, null, $path);
+		*
+		*  $hookData = [];
+		*  $res = $this->select(__METHOD__, null, $hookData);
 		*
 		*  This is a kludge, but one I have not yet found a way around.
 		*  Sorry.                                                        */
